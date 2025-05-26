@@ -1,0 +1,4 @@
+baseURL = 'https://blog.freeic.top/'
+languageCode = 'zh-cn'
+title = 'FreeeeeeIC'
+theme = 'texify3'
