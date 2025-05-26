@@ -21,7 +21,9 @@ jobs:
         hugo-version: "latest"
         extended: true
     - name: Prereq
-      run: sudo snap install dart-sass
+      run: |
+        sudo snap install dart-sass
+        npm i -D postcss postcss-cli autoprefixer
     - name: Build and Deploy
       run: |
           hugo -F --cleanDestinationDir
