@@ -26,7 +26,11 @@ jobs:
         npm i -D postcss postcss-cli autoprefixer postcss-import
     - name: Build and Deploy
       run: |
-          hugo -F --cleanDestinationDir
-          mkdir -p public
-          cp -r public/* ./
+          hugo \
+            --gc \
+            --minify \
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: ./public
 
